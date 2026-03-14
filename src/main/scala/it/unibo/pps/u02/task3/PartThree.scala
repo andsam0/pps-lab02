@@ -4,7 +4,6 @@ import scala.annotation.tailrec
 
 
 object PartThree {
-//  2^4 = 2*2^3 ... 2^0
 
   def power(base: Double, exponent: Int): Double = (base, exponent) match {
     case (_, exponent) if exponent == 0 => 1
