@@ -9,15 +9,15 @@ object Expression:
 
   object Expr:
 
-    def evaluate(expr: Expr): Int = expr match {
+    def evaluate(expr: Expr): Int = expr match
       case Expr.Literal(v) => v
       case Add(left, right) => evaluate(left) + evaluate(right)
       case Multiply(left, right) => evaluate(left) * evaluate(right)
-    }
 
-    def show(expr: Expr): String = expr match {
+
+    def show(expr: Expr): String = expr match
       case Expr.Literal(v) => s"$v"
       case Add(left, right) => s"(${show(left)} + ${show(right)})"
       case Multiply(left, right) => s"(${show(left)} * ${show(right)})"
-    }
+
 
